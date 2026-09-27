@@ -3,8 +3,8 @@ import vue from "@vitejs/plugin-vue";
 import cesium from "vite-plugin-cesium";
 
 export default defineConfig({
-  // GitHub Pages 项目站点子路径：https://<用户名>.github.io/shanshui-mingtang-fengshui-gis/
-  base: "/shanshui-mingtang-fengshui-gis/",
+  // Vercel 部署在根域名；本地 dev 同样使用根路径
+  base: "/",
   plugins: [vue(), cesium()],
   server: {
     port: 5173,

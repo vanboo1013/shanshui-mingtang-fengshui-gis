@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000",
+  // 未配置 API 地址时默认同域（Vercel 前后端共用域名）；本地开发在 .env 中配置后端地址
+  baseURL: import.meta.env.VITE_API_BASE_URL || "",
   // Real DEM + water analysis + AI interpretation can take 30-60 seconds.
   timeout: 90000,
 });
